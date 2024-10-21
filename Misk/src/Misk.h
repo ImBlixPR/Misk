@@ -3,6 +3,7 @@
 
 //For use by Misk applactions
 #include "Misk/Applaction.h"
+#include "Misk/log.h"
 
 
 //---------Entry Point---------

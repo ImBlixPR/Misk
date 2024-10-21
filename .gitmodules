@@ -1,0 +1,3 @@
+[submodule "Misk/vendor/spdlog"]
+	path = Misk/vendor/spdlog
+	url = https://github.com/gabime/spdlog

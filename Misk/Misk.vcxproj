@@ -112,6 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_BUILD_DLL;MK_BUILD_DLL_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Misk\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,6 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_BUILD_DLL;MK_BUILD_DLLNDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Misk\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,9 +137,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Misk\Log.cpp" />
     <ClCompile Include="src\Misk\Applaction.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Misk\Log.h" />
     <ClInclude Include="src\Misk.h" />
     <ClInclude Include="src\Misk\Applaction.h" />
     <ClInclude Include="src\Misk\Core.h" />
