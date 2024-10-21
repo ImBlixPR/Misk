@@ -1,0 +1,10 @@
+#Folder
+
+.vs/
+bin/
+bin-int/
+
+
+#File
+
+*.user
