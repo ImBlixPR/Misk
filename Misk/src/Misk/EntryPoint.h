@@ -13,6 +13,7 @@ int main() {
 	MK_ERROR("hello");
 	MK_CORE_CRITICAL("almaktar");
 	MK_WARN("Imblix");
+	MK_CORE_TRACE("Qais");
 
 	auto app = Misk::CreateApplaction();
 	app->run();
