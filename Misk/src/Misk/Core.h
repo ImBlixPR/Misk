@@ -11,3 +11,8 @@
 	#error Misk only support Window!
 #endif // MK_PLATFORM_WINDOW
 
+
+
+
+#define BIT(x) (1 << x)
+

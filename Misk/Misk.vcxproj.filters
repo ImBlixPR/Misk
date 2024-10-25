@@ -7,6 +7,9 @@
     <Filter Include="src\Misk">
       <UniqueIdentifier>{103622CF-FC02-7DDA-251C-6B821148B268}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Misk\Event">
+      <UniqueIdentifier>{6103DC2B-4DD1-CF31-3665-405822D2AB96}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -26,6 +29,18 @@
     </ClInclude>
     <ClInclude Include="src\Misk\EntryPoint.h">
       <Filter>src\Misk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Event\ApplicationEvent.h">
+      <Filter>src\Misk\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Event\Event.h">
+      <Filter>src\Misk\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Event\KeyEvent.h">
+      <Filter>src\Misk\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Event\MouseEvent.h">
+      <Filter>src\Misk\Event</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Log.h">
       <Filter>src\Misk</Filter>
