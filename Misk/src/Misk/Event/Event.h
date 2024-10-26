@@ -1,11 +1,10 @@
 #pragma once
 
+#include "mkpch.h"
 
 
 #include "Misk/Core.h"
 
-#include <string>
-#include <functional>
 
 
 namespace Misk {

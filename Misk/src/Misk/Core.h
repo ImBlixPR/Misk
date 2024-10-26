@@ -1,7 +1,7 @@
 #pragma once
 
 
-#ifdef MK_PLATFORM_WINDOW
+#ifdef MK_PLATFORM_WINDOWS
 	#ifdef MK_BUILD_DLL
 		#define MISK_API __declspec(dllexport)
 	#else

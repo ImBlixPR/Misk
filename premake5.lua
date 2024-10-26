@@ -20,6 +20,10 @@ project "Misk"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "mkpch.h"
+	pchsource "Misk/src/mkpch.cpp"
+
+
 	files
 	{
 		"%{prj.name}/vendor/spdlog/include"
@@ -82,7 +86,7 @@ project "Misk"
 
 		defines
 		{
-			"MK_PLATFORM_WINDOW",
+			"MK_PLATFORM_WINDOWS",
 			"MK_BUILD_DLL"
 		}
 

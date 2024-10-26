@@ -45,6 +45,9 @@
     <ClInclude Include="src\Misk\Log.h">
       <Filter>src\Misk</Filter>
     </ClInclude>
+    <ClInclude Include="src\mkpch.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Misk\Applaction.cpp">
@@ -52,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="src\Misk\Log.cpp">
       <Filter>src\Misk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mkpch.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

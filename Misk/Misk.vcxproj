@@ -76,9 +76,10 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_BUILD_DLL;MK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -98,9 +99,10 @@ IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-win
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_BUILD_DLL;MK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -124,9 +126,10 @@ IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_BUILD_DLL;MK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -158,10 +161,14 @@ IF EXIST ..\bin\Dist-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windo
     <ClInclude Include="src\Misk\Event\KeyEvent.h" />
     <ClInclude Include="src\Misk\Event\MouseEvent.h" />
     <ClInclude Include="src\Misk\Log.h" />
+    <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Misk\Applaction.cpp" />
     <ClCompile Include="src\Misk\Log.cpp" />
+    <ClCompile Include="src\mkpch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="vendor\spdlog\include" />
