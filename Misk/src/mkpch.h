@@ -13,6 +13,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Misk/Log.h"
+
 
 #ifdef MK_PLATFORM_WINDOWS
 	#include <Windows.h>

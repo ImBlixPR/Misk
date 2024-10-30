@@ -3,7 +3,7 @@
 #include "Log.h"
 
 
-#ifdef MK_PLATFORM_WINDOW
+#ifdef MK_PLATFORM_WINDOWS
 
 extern Misk::Applaction* Misk::CreateApplaction();
 

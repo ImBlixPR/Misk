@@ -10,6 +10,9 @@
     <Filter Include="src\Misk\Event">
       <UniqueIdentifier>{6103DC2B-4DD1-CF31-3665-405822D2AB96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Misk\Platform">
+      <UniqueIdentifier>{6444560C-D05A-54A2-19D2-DFC38527252A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -45,6 +48,12 @@
     <ClInclude Include="src\Misk\Log.h">
       <Filter>src\Misk</Filter>
     </ClInclude>
+    <ClInclude Include="src\Misk\Platform\WindowWindows.h">
+      <Filter>src\Misk\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Window.h">
+      <Filter>src\Misk</Filter>
+    </ClInclude>
     <ClInclude Include="src\mkpch.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -55,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="src\Misk\Log.cpp">
       <Filter>src\Misk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp">
+      <Filter>src\Misk\Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\mkpch.cpp">
       <Filter>src</Filter>

@@ -11,6 +11,11 @@ workspace "Misk"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Misk/vendor/GLFW/include"
+
+include "Misk/vendor/GLFW"
+
 project "Misk"
 	
 	location "Misk"
@@ -75,9 +80,15 @@ project "Misk"
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
 	}
 
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
+	}
 
 	filter "system:windows"
 		cppdialect "C++17"
@@ -141,7 +152,7 @@ project "SandBox"
 
 		defines
 		{
-			"MK_PLATFORM_WINDOW"
+			"MK_PLATFORM_WINDOWS"
 		}
 
 
