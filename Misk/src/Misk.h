@@ -2,7 +2,7 @@
 
 
 //For use by Misk applactions
-#include "Misk/Applaction.h"
+#include "Misk/Appliction.h"
 #include "Misk/log.h"
 
 

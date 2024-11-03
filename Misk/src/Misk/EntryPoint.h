@@ -1,21 +1,22 @@
 #pragma once
 #include "Core.h"
-#include "Log.h"
+#include "mkpch.h"
 
 
 #ifdef MK_PLATFORM_WINDOWS
 
-extern Misk::Applaction* Misk::CreateApplaction();
+extern Misk::Appliction* Misk::CreateAppliction();
 
 int main() {
 
 	Misk::Log::init();
 
 	MK_ERROR("hello");
+	MK_CORE_ERROR("hello world!");
 	MK_CORE_CRITICAL("almaktar");
 	MK_WARN("Imblix");
 
-	auto app = Misk::CreateApplaction();
+	auto app = Misk::CreateAppliction();
 	app->run();
 	delete app;
 

@@ -156,7 +156,7 @@ IF EXIST ..\bin\Dist-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windo
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Misk.h" />
-    <ClInclude Include="src\Misk\Applaction.h" />
+    <ClInclude Include="src\Misk\Appliction.h" />
     <ClInclude Include="src\Misk\Core.h" />
     <ClInclude Include="src\Misk\EntryPoint.h" />
     <ClInclude Include="src\Misk\Event\ApplicationEvent.h" />
@@ -169,7 +169,7 @@ IF EXIST ..\bin\Dist-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windo
     <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Misk\Applaction.cpp" />
+    <ClCompile Include="src\Misk\Appliction.cpp" />
     <ClCompile Include="src\Misk\Log.cpp" />
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp" />
     <ClCompile Include="src\mkpch.cpp">

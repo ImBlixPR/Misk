@@ -4,6 +4,11 @@
 
 #include <GLFW/glfw3.h>
 
+//event header
+#include "Misk/Event/ApplicationEvent.h"
+#include "Misk/Event/MouseEvent.h"
+#include "Misk/Event/KeyEvent.h"
+
 
 
 

@@ -24,7 +24,7 @@
     <ClInclude Include="src\Misk.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Misk\Applaction.h">
+    <ClInclude Include="src\Misk\Appliction.h">
       <Filter>src\Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Core.h">
@@ -59,7 +59,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Misk\Applaction.cpp">
+    <ClCompile Include="src\Misk\Appliction.cpp">
       <Filter>src\Misk</Filter>
     </ClCompile>
     <ClCompile Include="src\Misk\Log.cpp">

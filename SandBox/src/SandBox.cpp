@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-class SandBox : public Misk::Applaction
+class SandBox : public Misk::Appliction
 {
 public:
 	SandBox()
@@ -16,7 +16,7 @@ public:
 	}
 };
 
-Misk::Applaction* Misk::CreateApplaction()
+Misk::Appliction* Misk::CreateAppliction()
 {
 	return new SandBox();
 }
