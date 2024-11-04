@@ -1,9 +1,10 @@
 #pragma once
 
 
-//For use by Misk applactions
-#include "Misk/Appliction.h"
-#include "Misk/log.h"
+//For use by Misk applications
+#include "Misk/Application.h"
+#include "Misk/Layer.h"
+#include "Misk/Log.h"
 
 
 //---------Entry Point---------

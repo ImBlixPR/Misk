@@ -79,11 +79,12 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -94,8 +95,7 @@
       <ImportLibrary>..\bin\Debug-windows\Misk\Misk.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows\Misk\Misk.dll ..\bin\Debug-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows\Misk\Misk.dll ..\bin\Debug-windows\SandBox &gt; nul)
-IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows\Misk\Misk.dll ..\bin\Debug-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows\Misk\Misk.dll ..\bin\Debug-windows\SandBox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows\Misk\Misk.dll ..\bin\Debug-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows\Misk\Misk.dll ..\bin\Debug-windows\SandBox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -103,7 +103,7 @@ IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-win
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -111,6 +111,7 @@ IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-win
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -122,8 +123,7 @@ IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-win
       <ImportLibrary>..\bin\Release-windows\Misk\Misk.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows\Misk\Misk.dll ..\bin\Release-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows\Misk\Misk.dll ..\bin\Release-windows\SandBox &gt; nul)
-IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows\Misk\Misk.dll ..\bin\Release-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows\Misk\Misk.dll ..\bin\Release-windows\SandBox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows\Misk\Misk.dll ..\bin\Release-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows\Misk\Misk.dll ..\bin\Release-windows\SandBox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -131,7 +131,7 @@ IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOW;MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -139,6 +139,7 @@ IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -150,34 +151,34 @@ IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release
       <ImportLibrary>..\bin\Dist-windows\Misk\Misk.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows\Misk\Misk.dll ..\bin\Dist-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows\Misk\Misk.dll ..\bin\Dist-windows\SandBox &gt; nul)
-IF EXIST ..\bin\Dist-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows\Misk\Misk.dll ..\bin\Dist-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows\Misk\Misk.dll ..\bin\Dist-windows\SandBox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows\Misk\Misk.dll ..\bin\Dist-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows\Misk\Misk.dll ..\bin\Dist-windows\SandBox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Misk.h" />
-    <ClInclude Include="src\Misk\Appliction.h" />
+    <ClInclude Include="src\Misk\Application.h" />
     <ClInclude Include="src\Misk\Core.h" />
     <ClInclude Include="src\Misk\EntryPoint.h" />
     <ClInclude Include="src\Misk\Event\ApplicationEvent.h" />
     <ClInclude Include="src\Misk\Event\Event.h" />
     <ClInclude Include="src\Misk\Event\KeyEvent.h" />
     <ClInclude Include="src\Misk\Event\MouseEvent.h" />
+    <ClInclude Include="src\Misk\Layer.h" />
+    <ClInclude Include="src\Misk\LayerStack.h" />
     <ClInclude Include="src\Misk\Log.h" />
     <ClInclude Include="src\Misk\Platform\WindowWindows.h" />
     <ClInclude Include="src\Misk\Window.h" />
     <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Misk\Appliction.cpp" />
+    <ClCompile Include="src\Misk\Application.cpp" />
+    <ClCompile Include="src\Misk\Layer.cpp" />
+    <ClCompile Include="src\Misk\LayerStack.cpp" />
     <ClCompile Include="src\Misk\Log.cpp" />
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp" />
     <ClCompile Include="src\mkpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="vendor\spdlog\include" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">

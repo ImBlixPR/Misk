@@ -1,80 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="src">
-      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    <Filter Include="Misk">
+      <UniqueIdentifier>{9916897C-854D-8A0D-2E3A-70101A50060F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Misk">
-      <UniqueIdentifier>{103622CF-FC02-7DDA-251C-6B821148B268}</UniqueIdentifier>
+    <Filter Include="Misk\Event">
+      <UniqueIdentifier>{AA66D5F4-961E-1742-FF25-F09DEBFCB132}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Misk\Event">
-      <UniqueIdentifier>{6103DC2B-4DD1-CF31-3665-405822D2AB96}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Misk\Platform">
-      <UniqueIdentifier>{6444560C-D05A-54A2-19D2-DFC38527252A}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vendor">
-      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vendor\spdlog">
-      <UniqueIdentifier>{8BBC5F22-F77C-DB58-C0B7-24D62C372035}</UniqueIdentifier>
+    <Filter Include="Misk\Platform">
+      <UniqueIdentifier>{0DCF2095-798F-9CCB-42CA-E548AE49E1A7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Misk.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Misk\Appliction.h">
-      <Filter>src\Misk</Filter>
+    <ClInclude Include="src\Misk.h" />
+    <ClInclude Include="src\Misk\Application.h">
+      <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Core.h">
-      <Filter>src\Misk</Filter>
+      <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\EntryPoint.h">
-      <Filter>src\Misk</Filter>
+      <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Event\ApplicationEvent.h">
-      <Filter>src\Misk\Event</Filter>
+      <Filter>Misk\Event</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Event\Event.h">
-      <Filter>src\Misk\Event</Filter>
+      <Filter>Misk\Event</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Event\KeyEvent.h">
-      <Filter>src\Misk\Event</Filter>
+      <Filter>Misk\Event</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Event\MouseEvent.h">
-      <Filter>src\Misk\Event</Filter>
+      <Filter>Misk\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Layer.h">
+      <Filter>Misk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\LayerStack.h">
+      <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Log.h">
-      <Filter>src\Misk</Filter>
+      <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Platform\WindowWindows.h">
-      <Filter>src\Misk\Platform</Filter>
+      <Filter>Misk\Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Window.h">
-      <Filter>src\Misk</Filter>
+      <Filter>Misk</Filter>
     </ClInclude>
-    <ClInclude Include="src\mkpch.h">
-      <Filter>src</Filter>
-    </ClInclude>
+    <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Misk\Appliction.cpp">
-      <Filter>src\Misk</Filter>
+    <ClCompile Include="src\Misk\Application.cpp">
+      <Filter>Misk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Misk\Layer.cpp">
+      <Filter>Misk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Misk\LayerStack.cpp">
+      <Filter>Misk</Filter>
     </ClCompile>
     <ClCompile Include="src\Misk\Log.cpp">
-      <Filter>src\Misk</Filter>
+      <Filter>Misk</Filter>
     </ClCompile>
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp">
-      <Filter>src\Misk\Platform</Filter>
+      <Filter>Misk\Platform</Filter>
     </ClCompile>
-    <ClCompile Include="src\mkpch.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="vendor\spdlog\include">
-      <Filter>vendor\spdlog</Filter>
-    </None>
+    <ClCompile Include="src\mkpch.cpp" />
   </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@
 
 #ifdef MK_PLATFORM_WINDOWS
 
-extern Misk::Appliction* Misk::CreateAppliction();
+extern Misk::Application* Misk::CreateApplication();
 
 int main() {
 
@@ -16,7 +16,7 @@ int main() {
 	MK_CORE_CRITICAL("almaktar");
 	MK_WARN("Imblix");
 
-	auto app = Misk::CreateAppliction();
+	auto app = Misk::CreateApplication();
 	app->run();
 	delete app;
 
