@@ -1,6 +1,8 @@
 #include "mkpch.h"
 #include "WindowWindows.h"
 
+#include <glad/glad.h>
+
 
 
 namespace Misk {
@@ -69,6 +71,7 @@ namespace Misk {
 
 		m_Window = glfwCreateWindow((int)m_Data.Width, (int)m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
@@ -124,6 +127,14 @@ namespace Misk {
 					}
 				}
 
+			});
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int codepoin)
+			{
+				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+				KeyTypedEvent event(codepoin);
+				data.EventCallBack(event);
 			});
 
 		//Window mouse scroll event call back

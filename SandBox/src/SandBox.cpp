@@ -12,12 +12,12 @@ public:
 
 	void OnUpdate() override
 	{
-		MK_INFO("ExampleLayer::Update");
+		//MK_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(Misk::Event& e) override
 	{
-		MK_TRACE("{0}", e.ToString());
+		//MK_TRACE("{0}", e.ToString());
 	}
 };
 
@@ -28,6 +28,7 @@ public:
 	SandBox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Misk::ImguiLayer());
 	}
 
 	~SandBox()

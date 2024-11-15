@@ -2,7 +2,7 @@
 
 #include "Application.h"
 
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 
 
@@ -11,13 +11,18 @@
 namespace Misk {
 
 
-#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
+
+	Application* Application::m_Instanc = nullptr;
 
 	Application::Application()
 	{
+
+		MK_CORE_ASSERT(!m_Instanc, "there is already an insttance of the application")
+		m_Instanc = this;
 		m_Window = std::unique_ptr<Window>(Window::Create());
-		m_Window->SetEventCallBack(BIND_EVENT_FN(OnEvent));
+		m_Window->SetEventCallBack(MK_BIND_EVENT_FN(Application::OnEvent));
+
 	}
 
 	Application::~Application()
@@ -43,8 +48,8 @@ namespace Misk {
 	void Application::OnEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
-		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
-		MK_CORE_TRACE("{0}", e.ToString());
+		dispatcher.Dispatch<WindowCloseEvent>(MK_BIND_EVENT_FN(Application::OnWindowClose));
+		//MK_CORE_TRACE("{0}", e.ToString());
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
 		{

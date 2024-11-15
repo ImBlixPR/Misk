@@ -13,8 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Misk/vendor/GLFW/include"
+IncludeDir["Glad"] = "Misk/vendor/Glad/include"
+IncludeDir["imgui"] = "Misk/vendor/imgui"
 
 include "Misk/vendor/GLFW"
+include "Misk/vendor/Glad"
+include "Misk/vendor/imgui"
 
 project "Misk"
 	
@@ -28,7 +32,6 @@ project "Misk"
 	pchheader "mkpch.h"
 	pchsource "Misk/src/mkpch.cpp"
 
-	 
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -39,12 +42,16 @@ project "Misk"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.imgui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"imgui",
 		"opengl32.lib"
 	}
 
@@ -56,7 +63,8 @@ project "Misk"
 		defines
 		{
 			"MK_PLATFORM_WINDOWS",
-			"MK_BUILD_DLL"
+			"MK_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -98,7 +106,8 @@ project "SandBox"
 	includedirs
 	{
 		"Misk/vendor/spdlog/include",
-		"Misk/src"
+		"Misk/src",
+		"Misk/vendor/imgui"
 	}
 
 	links

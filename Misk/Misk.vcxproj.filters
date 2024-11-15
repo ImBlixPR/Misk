@@ -7,8 +7,14 @@
     <Filter Include="Misk\Event">
       <UniqueIdentifier>{AA66D5F4-961E-1742-FF25-F09DEBFCB132}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Misk\Imgui">
+      <UniqueIdentifier>{A3E218F5-8F9A-5A42-F8A1-339EE478F532}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Misk\Platform">
       <UniqueIdentifier>{0DCF2095-798F-9CCB-42CA-E548AE49E1A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misk\Platform\OpenGl">
+      <UniqueIdentifier>{C167F6AD-ADF6-7F77-5615-94724283901D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +40,9 @@
     <ClInclude Include="src\Misk\Event\MouseEvent.h">
       <Filter>Misk\Event</Filter>
     </ClInclude>
+    <ClInclude Include="src\Misk\Imgui\ImguiLayer.h">
+      <Filter>Misk\Imgui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Misk\Layer.h">
       <Filter>Misk</Filter>
     </ClInclude>
@@ -43,6 +52,12 @@
     <ClInclude Include="src\Misk\Log.h">
       <Filter>Misk</Filter>
     </ClInclude>
+    <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3.h">
+      <Filter>Misk\Platform\OpenGl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3_loader.h">
+      <Filter>Misk\Platform\OpenGl</Filter>
+    </ClInclude>
     <ClInclude Include="src\Misk\Platform\WindowWindows.h">
       <Filter>Misk\Platform</Filter>
     </ClInclude>
@@ -50,10 +65,14 @@
       <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\mkpch.h" />
+    <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_glfw.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Misk\Application.cpp">
       <Filter>Misk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Misk\Imgui\ImguiLayer.cpp">
+      <Filter>Misk\Imgui</Filter>
     </ClCompile>
     <ClCompile Include="src\Misk\Layer.cpp">
       <Filter>Misk</Filter>
@@ -64,9 +83,13 @@
     <ClCompile Include="src\Misk\Log.cpp">
       <Filter>Misk</Filter>
     </ClCompile>
+    <ClCompile Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3.cpp">
+      <Filter>Misk\Platform\OpenGl</Filter>
+    </ClCompile>
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp">
       <Filter>Misk\Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\mkpch.cpp" />
+    <ClCompile Include="src\Misk\Platform\OpenGl\imgui_impl_glfw.cpp" />
   </ItemGroup>
 </Project>
