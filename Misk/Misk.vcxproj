@@ -95,7 +95,7 @@
       <ImportLibrary>..\bin\Debug-windows\Misk\Misk.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows\Misk\Misk.dll ..\bin\Debug-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows\Misk\Misk.dll ..\bin\Debug-windows\SandBox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows\Misk\Misk.dll "..\bin\Debug-windows\SandBox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows\Misk\Misk.dll "..\bin\Debug-windows\SandBox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,7 +123,7 @@
       <ImportLibrary>..\bin\Release-windows\Misk\Misk.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows\Misk\Misk.dll ..\bin\Release-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows\Misk\Misk.dll ..\bin\Release-windows\SandBox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows\Misk\Misk.dll "..\bin\Release-windows\SandBox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows\Misk\Misk.dll "..\bin\Release-windows\SandBox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -151,7 +151,7 @@
       <ImportLibrary>..\bin\Dist-windows\Misk\Misk.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows\Misk\Misk.dll ..\bin\Dist-windows\SandBox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows\Misk\Misk.dll ..\bin\Dist-windows\SandBox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows\Misk\Misk.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows\Misk\Misk.dll "..\bin\Dist-windows\SandBox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows\Misk\Misk.dll "..\bin\Dist-windows\SandBox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -164,12 +164,16 @@
     <ClInclude Include="src\Misk\Event\KeyEvent.h" />
     <ClInclude Include="src\Misk\Event\MouseEvent.h" />
     <ClInclude Include="src\Misk\Imgui\ImguiLayer.h" />
+    <ClInclude Include="src\Misk\Input.h" />
+    <ClInclude Include="src\Misk\KeyCode.h" />
     <ClInclude Include="src\Misk\Layer.h" />
     <ClInclude Include="src\Misk\LayerStack.h" />
     <ClInclude Include="src\Misk\Log.h" />
+    <ClInclude Include="src\Misk\MouseButtonCode.h" />
     <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_glfw.h" />
     <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\Misk\Platform\WindowInput.h" />
     <ClInclude Include="src\Misk\Platform\WindowWindows.h" />
     <ClInclude Include="src\Misk\Window.h" />
     <ClInclude Include="src\mkpch.h" />
@@ -182,6 +186,7 @@
     <ClCompile Include="src\Misk\Log.cpp" />
     <ClCompile Include="src\Misk\Platform\OpenGl\imgui_impl_glfw.cpp" />
     <ClCompile Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Misk\Platform\WindowInput.cpp" />
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp" />
     <ClCompile Include="src\mkpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

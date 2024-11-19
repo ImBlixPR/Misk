@@ -13,6 +13,9 @@ public:
 	void OnUpdate() override
 	{
 		//MK_INFO("ExampleLayer::Update");
+
+		if (Misk::Input::IsKeyPressed(MK_KEY_SPACE))
+			MK_TRACE("space key is pressed!");
 	}
 
 	void OnEvent(Misk::Event& e) override

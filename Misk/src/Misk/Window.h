@@ -3,7 +3,7 @@
 #include "mkpch.h"
 
 #include "Event/Event.h"
-
+#include "Misk/Input.h"
 
 namespace Misk {
 
@@ -23,6 +23,7 @@ namespace Misk {
 
 	class MISK_API Window {
 	public:
+		
 		using EventCallBackFn = std::function<void(Event&)>;
 
 		virtual ~Window() {}

@@ -1,6 +1,8 @@
 workspace "Misk"
 	
 	architecture "x64"
+	startproject "SandBox"
+
 
 	configurations
 	{
@@ -69,7 +71,7 @@ project "Misk"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/SandBox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/SandBox/\"")
 		}
 
 	filter "configurations:Debug"
