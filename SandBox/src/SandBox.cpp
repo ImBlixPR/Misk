@@ -1,9 +1,10 @@
 #include <Misk.h>
 
 
+
 class ExampleLayer : public Misk::Layer
 {
-public:
+public: 
 	ExampleLayer()
 		: Layer("Example")
 	{

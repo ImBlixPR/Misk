@@ -43,6 +43,12 @@
     <ClInclude Include="src\Misk\Imgui\ImguiLayer.h">
       <Filter>Misk\Imgui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Misk\Input.h">
+      <Filter>Misk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\KeyCode.h">
+      <Filter>Misk</Filter>
+    </ClInclude>
     <ClInclude Include="src\Misk\Layer.h">
       <Filter>Misk</Filter>
     </ClInclude>
@@ -50,6 +56,9 @@
       <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Log.h">
+      <Filter>Misk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\MouseButtonCode.h">
       <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_glfw.h">
@@ -61,6 +70,9 @@
     <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3_loader.h">
       <Filter>Misk\Platform\OpenGl</Filter>
     </ClInclude>
+    <ClInclude Include="src\Misk\Platform\WindowInput.h">
+      <Filter>Misk\Platform</Filter>
+    </ClInclude>
     <ClInclude Include="src\Misk\Platform\WindowWindows.h">
       <Filter>Misk\Platform</Filter>
     </ClInclude>
@@ -68,10 +80,6 @@
       <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\mkpch.h" />
-    <ClInclude Include="src\Misk\Input.h" />
-    <ClInclude Include="src\Misk\Platform\WindowInput.h" />
-    <ClInclude Include="src\Misk\KeyCode.h" />
-    <ClInclude Include="src\Misk\MouseButtonCode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Misk\Application.cpp">
@@ -98,7 +106,9 @@
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp">
       <Filter>Misk\Platform</Filter>
     </ClCompile>
+    <ClCompile Include="src\Misk\Platform\WindowInput.cpp">
+      <Filter>Misk\Platform</Filter>
+    </ClCompile>
     <ClCompile Include="src\mkpch.cpp" />
-    <ClCompile Include="src\Misk\Platform\WindowInput.cpp" />
   </ItemGroup>
 </Project>
