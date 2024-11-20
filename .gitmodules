@@ -8,3 +8,6 @@
 [submodule "Misk/vendor/glm"]
 	path = Misk/vendor/glm
 	url = https://github.com/g-truc/glm.git
+[submodule "Misk/vendor/imgui"]
+	path = Misk/vendor/imgui
+	url = https://github.com/ocornut/imgui/tree/docking
