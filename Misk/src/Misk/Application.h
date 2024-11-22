@@ -5,6 +5,7 @@
 #include "Misk/Event/ApplicationEvent.h"
 #include "Misk/Event/MouseEvent.h"
 #include "Misk/LayerStack.h"
+#include "Misk/Imgui/ImguiLayer.h"
 #include <memory>
 
 
@@ -28,6 +29,7 @@ namespace Misk {
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window;
+		ImguiLayer* m_ImguiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 

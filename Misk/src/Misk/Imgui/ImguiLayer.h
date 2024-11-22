@@ -3,7 +3,6 @@
 
 
 #include "Misk/Layer.h"
-#include "Misk/Platform/OpenGl/imgui_impl_opengl3.h"
 #include "imgui.h"
 
 #include "Misk/Event/KeyEvent.h"
@@ -20,28 +19,20 @@ namespace Misk {
 		ImguiLayer();
 		~ImguiLayer();
 
-		void OnAttach();
-		void OnDettach();
-		void OnUpdate();
-		void OnEvent(Event& e);
+		virtual void OnAttach() override;
+		virtual void OnDettach() override;
+		void OnImguiRender() override;
+		inline static ImGuiContext* GetImguiContext() { return m_ctx; }
 
-	private: 
-		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
-		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
-		bool OnMouseMovedEvent(MouseMovedEvent& e);
-		bool OnMouseScrolledEvent(MouseScrolledEvent& e);
-		bool OnKeyPressedEvent(KeyPressedEvent& e);
-		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
-		bool OnKeyTypedEvent(KeyTypedEvent& e);
-		bool OnWindowResizeEvent(WindowResizeEvent& e);
+		void Begin();
+		void End();
 
-
-        ImGuiKey ImGui_ImplGlfw_KeyToImGuiKey(int keycode, int scancode = 1);
 
 
 	private:
 		float m_Time = 0.0f;
 		ImVec4 clear_color;
+		static ImGuiContext* m_ctx;
 	};
 
 

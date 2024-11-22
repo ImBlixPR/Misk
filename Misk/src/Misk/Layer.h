@@ -1,6 +1,8 @@
 #pragma once
 #include "Core.h"
+
 #include "Misk/Event/Event.h"
+
 
 namespace Misk {
 
@@ -15,6 +17,9 @@ namespace Misk {
 		virtual void OnDettach() {}
 		virtual void OnUpdate() {}
 		virtual void OnEvent(Event& e) {}
+		virtual void OnImguiRender() {}
+		virtual std::string GetName() { return m_DebugName; }
+
 
 	protected:
 		std::string m_DebugName;

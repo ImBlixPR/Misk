@@ -24,7 +24,7 @@ namespace Misk {
 
 	private:
 		std::vector<Layer*> m_Layers;
-		std::vector<Layer*>::const_iterator m_LayerInsert;
+		unsigned int m_LayerInsertIndex = 0;
 	};
 }
 

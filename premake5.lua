@@ -68,7 +68,8 @@ project "Misk"
 		{
 			"MK_PLATFORM_WINDOWS",
 			"MK_BUILD_DLL",
-			"GLFW_INCLUDE_NONE"
+			"GLFW_INCLUDE_NONE",
+			"MK_ENABLE_ASSERTS"
 		}
 
 		postbuildcommands
@@ -117,7 +118,8 @@ project "SandBox"
 
 	links
 	{
-		"Misk"
+		"Misk",
+		"imgui"
 	}
 
 	filter "system:windows"
@@ -127,7 +129,8 @@ project "SandBox"
 
 		defines
 		{
-			"MK_PLATFORM_WINDOWS"
+			"MK_PLATFORM_WINDOWS",
+			"MK_ENABLE_ASSERTS"
 		}
 
 
