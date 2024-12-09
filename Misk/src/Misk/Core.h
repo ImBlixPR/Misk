@@ -2,11 +2,15 @@
 
 
 #ifdef MK_PLATFORM_WINDOWS
+#if MK_DYNAMIC_LINK
 	#ifdef MK_BUILD_DLL
-		#define MISK_API __declspec(dllexport)
+		#define  MISK_API __declspec(dllexport)
 	#else
-		#define MISK_API __declspec(dllimport)
+		#define  MISK_API __declspec(dllimport)
 	#endif // MK_BUILD_DLL
+#else
+	#define  MISK_API
+#endif
 #else
 	#error Misk only support Window!
 #endif // MK_PLATFORM_WINDOW

@@ -3,10 +3,10 @@
 #include "Misk/Application.h"
 #include "Misk/Platform/WindowWindows.h"
 #include "Misk/Core.h"
-#include "Misk/Platform/OpenGl/imgui_impl_opengl3.h"
+#include "Misk/Platform/OpenGl/ImguiBackend/imgui_impl_opengl3.h"
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
-#include "Misk/Platform/OpenGl/imgui_impl_glfw.h"
+#include "Misk/Platform/OpenGl/ImguiBackend/imgui_impl_glfw.h"
 
 
 

@@ -6,7 +6,7 @@
 
 namespace Misk {
 
-	class MISK_API Layer
+	class   Layer
 	{
 	public:
 		Layer(std::string debugName = "Layer");

@@ -13,7 +13,7 @@
 namespace Misk {
 
 
-	class MISK_API ImguiLayer : public Layer
+	class   ImguiLayer : public Layer
 	{
 	public:
 		ImguiLayer();

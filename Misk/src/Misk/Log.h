@@ -9,7 +9,7 @@
 
 namespace Misk {
 
-	class MISK_API Log
+	class   Log
 	{
 	public:
 		static void init();

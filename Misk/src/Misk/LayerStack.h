@@ -8,7 +8,7 @@
 
 namespace Misk {
 
-	class MISK_API LayerStack
+	class   LayerStack
 	{
 	public:
 		LayerStack();

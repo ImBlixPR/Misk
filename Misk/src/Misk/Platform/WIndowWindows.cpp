@@ -1,6 +1,8 @@
 #include "mkpch.h"
 #include "WindowWindows.h"
 
+#include "Misk/Platform/OpenGl/OpenglContext.h"
+
 #include <glad/glad.h>
 
 
@@ -34,7 +36,7 @@ namespace Misk {
 	void WindowWindows::OnUpdate()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+		context->SwapBuffer();
 	}
 
 	void WindowWindows::SetVSync(bool enabled)
@@ -70,7 +72,10 @@ namespace Misk {
 		}
 
 		m_Window = glfwCreateWindow((int)m_Data.Width, (int)m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
+		
+		context = new OpenglContext(m_Window);
+
+		context->Init();
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
@@ -184,6 +189,7 @@ namespace Misk {
 	void WindowWindows::Shutdown()
 	{
 		glfwDestroyWindow(m_Window);
+		delete context;
 	}
 
 }

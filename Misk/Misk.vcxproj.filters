@@ -61,15 +61,6 @@
     <ClInclude Include="src\Misk\MouseButtonCode.h">
       <Filter>Misk</Filter>
     </ClInclude>
-    <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_glfw.h">
-      <Filter>Misk\Platform\OpenGl</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3.h">
-      <Filter>Misk\Platform\OpenGl</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3_loader.h">
-      <Filter>Misk\Platform\OpenGl</Filter>
-    </ClInclude>
     <ClInclude Include="src\Misk\Platform\WindowInput.h">
       <Filter>Misk\Platform</Filter>
     </ClInclude>
@@ -80,6 +71,11 @@
       <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\mkpch.h" />
+    <ClInclude Include="src\Misk\Render\Context.h" />
+    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_glfw.h" />
+    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\Misk\Platform\OpenGl\OpenglContext.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Misk\Application.cpp">
@@ -97,12 +93,6 @@
     <ClCompile Include="src\Misk\Log.cpp">
       <Filter>Misk</Filter>
     </ClCompile>
-    <ClCompile Include="src\Misk\Platform\OpenGl\imgui_impl_glfw.cpp">
-      <Filter>Misk\Platform\OpenGl</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Misk\Platform\OpenGl\imgui_impl_opengl3.cpp">
-      <Filter>Misk\Platform\OpenGl</Filter>
-    </ClCompile>
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp">
       <Filter>Misk\Platform</Filter>
     </ClCompile>
@@ -110,5 +100,8 @@
       <Filter>Misk\Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\mkpch.cpp" />
+    <ClCompile Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Misk\Platform\OpenGl\OpenglContext.cpp" />
   </ItemGroup>
 </Project>

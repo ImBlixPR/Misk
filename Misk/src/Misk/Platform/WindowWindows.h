@@ -8,7 +8,7 @@
 #include "Misk/Event/ApplicationEvent.h"
 #include "Misk/Event/MouseEvent.h"
 #include "Misk/Event/KeyEvent.h"
-
+#include "Misk/Render/Context.h"
 
 
 
@@ -49,6 +49,8 @@ namespace Misk
 			bool VSync;
 			EventCallBackFn EventCallBack;
 		};
+
+		Context* context;
 
 		WindowData m_Data;
 	};
