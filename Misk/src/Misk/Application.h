@@ -26,13 +26,30 @@ namespace Misk {
 		inline static Application& Get() { return *m_Instanc; }
 		inline Window& GetWindow() { return *m_Window; }
 
+		float GetYChange();
+		float GetXChange();
+
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
+		void OnMouseChange();
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImguiLayer* m_ImguiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
+		float m_LastTime;
+
+		//Mouse property
+		struct MouseProp {
+			float lastX;
+			float lastY;
+			float xChange;
+			float yChange;
+			bool firstMove = true;
+		};
+
+		MouseProp m_MouseProp;
 		static Application* m_Instanc;
 	};
 

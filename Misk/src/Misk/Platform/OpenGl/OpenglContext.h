@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Misk/Render/Context.h"
-
+#include "Misk/Window.h"
 struct GLFWwindow;
 
 namespace Misk
@@ -13,6 +13,7 @@ namespace Misk
 		OpenglContext(GLFWwindow* handleWindow);
 
 		void Init() override;
+		void mouseDispaly(GLFWwindow* myWindow, bool mouseOn = false);
 		void SwapBuffer() override;
 
 	private:

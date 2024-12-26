@@ -2,7 +2,7 @@
 #include "Core.h"
 
 #include "Misk/Event/Event.h"
-
+#include "Misk/Core/Timestep.h"
 
 namespace Misk {
 
@@ -15,7 +15,7 @@ namespace Misk {
 
 		virtual void OnAttach() {}
 		virtual void OnDettach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnEvent(Event& e) {}
 		virtual void OnImguiRender() {}
 		virtual std::string GetName() { return m_DebugName; }

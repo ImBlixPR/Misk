@@ -78,8 +78,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_ENABLE_ASSERTS;MK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Misk\vendor\spdlog\include;..\Misk\src;..\Misk\vendor\imgui;..\Misk\vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MK_ENABLE_ASSERTS;MK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Misk\vendor\spdlog\include;..\Misk\src;..\Misk\vendor\imgui;..\Misk\vendor\Glad\include;..\Misk\vendor\glm;..\Misk\vendor\STB\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -95,8 +95,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_ENABLE_ASSERTS;MK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Misk\vendor\spdlog\include;..\Misk\src;..\Misk\vendor\imgui;..\Misk\vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MK_ENABLE_ASSERTS;MK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Misk\vendor\spdlog\include;..\Misk\src;..\Misk\vendor\imgui;..\Misk\vendor\Glad\include;..\Misk\vendor\glm;..\Misk\vendor\STB\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -116,8 +116,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_ENABLE_ASSERTS;MK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Misk\vendor\spdlog\include;..\Misk\src;..\Misk\vendor\imgui;..\Misk\vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MK_ENABLE_ASSERTS;MK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Misk\vendor\spdlog\include;..\Misk\src;..\Misk\vendor\imgui;..\Misk\vendor\Glad\include;..\Misk\vendor\glm;..\Misk\vendor\STB\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -134,9 +134,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\game\Core\Light.h" />
+    <ClInclude Include="src\game\Game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\game\Game.cpp" />
     <ClCompile Include="src\SandBox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Misk\vendor\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Misk\Misk.vcxproj">
       <Project>{9916897C-854D-8A0D-2E3A-70101A50060F}</Project>
     </ProjectReference>

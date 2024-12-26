@@ -18,6 +18,7 @@ IncludeDir["GLFW"] = "Misk/vendor/GLFW/include"
 IncludeDir["Glad"] = "Misk/vendor/Glad/include"
 IncludeDir["imgui"] = "Misk/vendor/imgui"
 IncludeDir["glm"] = "Misk/vendor/glm"
+IncludeDir["stb"] = "Misk/vendor/STB/include"
 
 include "Misk/vendor/GLFW"
 include "Misk/vendor/Glad"
@@ -50,7 +51,8 @@ project "Misk"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.imgui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb}"
 	}
 
 	links
@@ -111,11 +113,14 @@ project "SandBox"
 		"Misk/vendor/spdlog/include",
 		"Misk/src",
 		"Misk/vendor/imgui",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb}"
 	}
 
 	links
 	{
+		"Glad",
 		"Misk",
 		"imgui"
 	}
@@ -127,6 +132,7 @@ project "SandBox"
 		defines
 		{
 			"MK_PLATFORM_WINDOWS",
+			"GLFW_INCLUDE_NONE",
 			"MK_ENABLE_ASSERTS"
 		}
 

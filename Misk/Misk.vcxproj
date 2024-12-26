@@ -77,7 +77,7 @@
       <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;GLFW_INCLUDE_NONE;MK_ENABLE_ASSERTS;MK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\STB\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -98,7 +98,7 @@
       <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;GLFW_INCLUDE_NONE;MK_ENABLE_ASSERTS;MK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\STB\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -123,7 +123,7 @@
       <PrecompiledHeaderFile>mkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;GLFW_INCLUDE_NONE;MK_ENABLE_ASSERTS;MK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\STB\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -146,7 +146,9 @@
     <ClInclude Include="src\Misk.h" />
     <ClInclude Include="src\Misk\Application.h" />
     <ClInclude Include="src\Misk\Core.h" />
+    <ClInclude Include="src\Misk\Core\Timestep.h" />
     <ClInclude Include="src\Misk\EntryPoint.h" />
+    <ClInclude Include="src\Misk\Environment\Light\Light.h" />
     <ClInclude Include="src\Misk\Event\ApplicationEvent.h" />
     <ClInclude Include="src\Misk\Event\Event.h" />
     <ClInclude Include="src\Misk\Event\KeyEvent.h" />
@@ -162,9 +164,13 @@
     <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Misk\Platform\OpenGl\OpenglContext.h" />
+    <ClInclude Include="src\Misk\Platform\OpenGl\Renderer\OpenglShader.h" />
     <ClInclude Include="src\Misk\Platform\WindowInput.h" />
     <ClInclude Include="src\Misk\Platform\WindowWindows.h" />
     <ClInclude Include="src\Misk\Render\Context.h" />
+    <ClInclude Include="src\Misk\Render\OpenglRenderer\Mesh.h" />
+    <ClInclude Include="src\Misk\Render\Shader.h" />
+    <ClInclude Include="src\Misk\Utility\Cemera.h" />
     <ClInclude Include="src\Misk\Window.h" />
     <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
@@ -177,8 +183,15 @@
     <ClCompile Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_glfw.cpp" />
     <ClCompile Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Misk\Platform\OpenGl\OpenglContext.cpp" />
+    <ClCompile Include="src\Misk\Platform\OpenGl\Renderer\OpenglShader.cpp" />
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp" />
     <ClCompile Include="src\Misk\Platform\WindowInput.cpp" />
+    <ClCompile Include="SRC\MISK\RENDER\OPENGLRENDERER\GLTexture.cpp" />
+    <ClInclude Include="src\Misk\Render\OpenglRenderer\GLTexture.h" />
+    <ClCompile Include="src\Misk\Render\OpenglRenderer\Mesh.cpp" />
+    <ClCompile Include="src\Misk\Render\Shader.cpp" />
+    <ClInclude Include="src\Misk\Render\Texture.h" />
+    <ClCompile Include="src\Misk\Utility\Cemera.cpp" />
     <ClCompile Include="src\mkpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

@@ -1,7 +1,7 @@
 #include "mkpch.h"
 #include "WindowWindows.h"
 
-#include "Misk/Platform/OpenGl/OpenglContext.h"
+
 
 #include <glad/glad.h>
 
@@ -25,6 +25,8 @@ namespace Misk {
 
 	WindowWindows::WindowWindows(const WindowProps& props)
 	{
+		m_YChange = 0;
+		m_XChange = 0;
 		Init(props);
 	}
 
@@ -37,6 +39,11 @@ namespace Misk {
 	{
 		glfwPollEvents();
 		context->SwapBuffer();
+	}
+
+	void WindowWindows::MouseOn(bool mouseOn)
+	{
+		context->mouseDispaly(m_Window, mouseOn);
 	}
 
 	void WindowWindows::SetVSync(bool enabled)
@@ -52,6 +59,20 @@ namespace Misk {
 	bool WindowWindows::IsVSync() const
 	{
 		return m_Data.VSync;
+	}
+
+	float WindowWindows::GetYChange()
+	{
+		GLfloat theChange = m_YChange;
+		m_YChange = 0.0f;
+		return theChange;
+	}
+
+	float WindowWindows::GetXChange()
+	{
+		GLfloat theChange = m_XChange;
+		m_XChange = 0.0f;
+		return theChange;
 	}
 
 	void WindowWindows::Init(const WindowProps& props)
@@ -76,6 +97,7 @@ namespace Misk {
 		context = new OpenglContext(m_Window);
 
 		context->Init();
+		context->mouseDispaly(m_Window, false);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);

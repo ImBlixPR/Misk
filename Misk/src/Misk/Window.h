@@ -29,6 +29,8 @@ namespace Misk {
 		virtual ~Window() {}
 		virtual void OnUpdate() = 0;
 
+		virtual void MouseOn(bool mouseOn) = 0;
+
 		//Getter function
 		virtual unsigned int GetWidth() const = 0;
 		virtual unsigned int GetHeight() const = 0;
@@ -41,6 +43,7 @@ namespace Misk {
 		virtual void* GetNativeWindow() const = 0;
 
 		static Window* Create(const WindowProps& props = WindowProps());
+		
 
 	};
 }

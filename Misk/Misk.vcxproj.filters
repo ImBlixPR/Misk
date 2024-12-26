@@ -16,6 +16,18 @@
     <Filter Include="Misk\Platform\OpenGl">
       <UniqueIdentifier>{C167F6AD-ADF6-7F77-5615-94724283901D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Misk\Platform\OpenGl\ImguiBackend">
+      <UniqueIdentifier>{D310C786-3F7F-1C06-8868-D705F41512A2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misk\Platform\OpenGl\Renderer">
+      <UniqueIdentifier>{87F49C85-F30C-84AF-BCB9-134928911849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misk\Render">
+      <UniqueIdentifier>{E86EA6AC-5424-1FA2-DD18-197949CD15A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misk\Render\OpenglRenderer">
+      <UniqueIdentifier>{D3672615-BF77-D2E5-2831-37041460C17E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Misk.h" />
@@ -61,21 +73,45 @@
     <ClInclude Include="src\Misk\MouseButtonCode.h">
       <Filter>Misk</Filter>
     </ClInclude>
+    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_glfw.h">
+      <Filter>Misk\Platform\OpenGl\ImguiBackend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3.h">
+      <Filter>Misk\Platform\OpenGl\ImguiBackend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3_loader.h">
+      <Filter>Misk\Platform\OpenGl\ImguiBackend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Platform\OpenGl\OpenglContext.h">
+      <Filter>Misk\Platform\OpenGl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Platform\OpenGl\Renderer\OpenglShader.h">
+      <Filter>Misk\Platform\OpenGl\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Misk\Platform\WindowInput.h">
       <Filter>Misk\Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\Misk\Platform\WindowWindows.h">
       <Filter>Misk\Platform</Filter>
     </ClInclude>
+    <ClInclude Include="src\Misk\Render\Context.h">
+      <Filter>Misk\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Render\OpenglRenderer\Mesh.h">
+      <Filter>Misk\Render\OpenglRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misk\Render\Shader.h">
+      <Filter>Misk\Render</Filter>
+    </ClInclude>
     <ClInclude Include="src\Misk\Window.h">
       <Filter>Misk</Filter>
     </ClInclude>
     <ClInclude Include="src\mkpch.h" />
-    <ClInclude Include="src\Misk\Render\Context.h" />
-    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3_loader.h" />
-    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_glfw.h" />
-    <ClInclude Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3.h" />
-    <ClInclude Include="src\Misk\Platform\OpenGl\OpenglContext.h" />
+    <ClInclude Include="src\Misk\Utility\Cemera.h" />
+    <ClInclude Include="src\Misk\Core\Timestep.h" />
+    <ClInclude Include="src\Misk\Render\Texture.h" />
+    <ClInclude Include="src\Misk\Render\OpenglRenderer\GLTexture.h" />
+    <ClInclude Include="src\Misk\Environment\Light\Light.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Misk\Application.cpp">
@@ -93,15 +129,30 @@
     <ClCompile Include="src\Misk\Log.cpp">
       <Filter>Misk</Filter>
     </ClCompile>
+    <ClCompile Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_glfw.cpp">
+      <Filter>Misk\Platform\OpenGl\ImguiBackend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3.cpp">
+      <Filter>Misk\Platform\OpenGl\ImguiBackend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Misk\Platform\OpenGl\OpenglContext.cpp">
+      <Filter>Misk\Platform\OpenGl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Misk\Platform\OpenGl\Renderer\OpenglShader.cpp">
+      <Filter>Misk\Platform\OpenGl\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Misk\Platform\WIndowWindows.cpp">
       <Filter>Misk\Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\Misk\Platform\WindowInput.cpp">
       <Filter>Misk\Platform</Filter>
     </ClCompile>
+    <ClCompile Include="src\Misk\Render\OpenglRenderer\Mesh.cpp">
+      <Filter>Misk\Render\OpenglRenderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\mkpch.cpp" />
-    <ClCompile Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_glfw.cpp" />
-    <ClCompile Include="src\Misk\Platform\OpenGl\ImguiBackend\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="src\Misk\Platform\OpenGl\OpenglContext.cpp" />
+    <ClCompile Include="src\Misk\Render\Shader.cpp" />
+    <ClCompile Include="src\Misk\Utility\Cemera.cpp" />
+    <ClCompile Include="SRC\MISK\RENDER\OPENGLRENDERER\GLTexture.cpp" />
   </ItemGroup>
 </Project>
