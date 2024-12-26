@@ -1,4 +1,5 @@
 # Misk
 Misk Engine
 
-![Screenshot 2024-11-15 145153](https://github.com/user-attachments/assets/7ee38e74-4bca-49cf-ba9f-ec2854316b94)
+
+![Screenshot 2024-12-26 150405](https://github.com/user-attachments/assets/99ceb929-81a7-48da-8485-2daa41fc46f7)
